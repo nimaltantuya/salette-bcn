@@ -1,0 +1,261 @@
+<!doctype html>
+<html lang="en" data-theme="light">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Salette — Fresh Salads & Poke | Barcelona</title>
+  <meta name="description" content="Fresh poke & salads in Gràcia — Salette. Order on Glovo or visit us." />
+  <link rel="stylesheet" href="styles.css" />
+</head>
+
+<body>
+  <a class="sr-only" href="#main" data-i18n="a11y.skip">Skip to content</a>
+
+  <!-- Header -->
+  <header class="site-header">
+    <div class="container header-inner">
+      <a class="brand" href="#top" id="brandToggle" aria-label="Toggle theme">
+        <img
+          id="brandLogo"
+          class="brand-logo"
+          src="assets/images/salette-logo-cream.png"
+          data-logo-dark="assets/images/salette-logo-cream.png"
+          data-logo-light="assets/images/salette-logo-green.png"
+          alt="Salette"
+          loading="eager"
+          decoding="async"
+          fetchpriority="high"
+        />
+
+        <span class="brand-name"></span>
+      </a>
+
+      <nav class="nav">
+        <a class="nav-link" href="#menu" data-i18n="nav.menu">Menu</a>
+        <a class="nav-link" href="#about" data-i18n="nav.about">About us</a>
+        <a class="nav-link" href="#location" data-i18n="nav.location">Location</a>
+      </nav>
+
+      <div class="header-actions">
+        <!-- Language pill dropdown -->
+        <div class="dropdown" id="langDropdown">
+          <button class="btn btn-pill btn-ghost" id="langBtn" type="button" aria-haspopup="true" aria-expanded="false">
+            <span id="langLabel">EN</span>
+            <svg class="chev" width="14" height="14" viewBox="0 0 24 24" aria-hidden="true">
+              <path d="M6 9l6 6 6-6" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+            </svg>
+          </button>
+
+          <div class="menu menu-pop" role="menu" aria-label="Language">
+            <button class="menu-item" role="menuitem" data-lang="en">English</button>
+            <button class="menu-item" role="menuitem" data-lang="es">Español</button>
+          </div>
+        </div>
+
+        <!-- Order -->
+        <a class="btn btn-pill btn-primary" id="orderBtn" href="#" target="_blank" rel="noopener" data-i18n="nav.order">Order</a>
+      </div>
+    </div>
+  </header>
+
+  <main id="main">
+    <!-- Hero -->
+    <section id="top" class="section hero">
+      <div class="container hero-grid">
+        <div class="hero-copy">
+          <div class="rating-pill">
+            <span class="dot"></span>
+            <span>Google</span>
+            <span class="muted">(5.0 • 16)</span>
+          </div>
+
+          <h1 class="hero-title" data-i18n="hero.title">Fresh Salads &amp; Poke in Gràcia</h1>
+          <p class="hero-lead" data-i18n="hero.lead">
+            Healthy, fast and delicious - made daily with quality ingredients.
+          </p>
+
+          <div class="hero-ctas">
+            <a class="btn btn-pill btn-primary" href="#menu" data-i18n="hero.ctaMenu">Explore menu</a>
+            <a class="btn btn-pill btn-ghost" href="#about" data-i18n="hero.ctaAbout">Meet the team</a>
+            <a class="btn btn-pill btn-ghost" href="#location" data-i18n="hero.ctaFind">Find us</a>
+          </div>
+
+          <div class="hero-info">
+            <div class="info-card">
+              <div class="info-k" data-i18n="hero.hoursLabel">Opening hours</div>
+              <div class="info-v" id="hoursValue">
+                Mon–Thu 12:00–21:00<br>
+                Fri–Sat 13:00–22:00<br>
+                Sun Closed
+              </div>
+            </div>
+            <div class="info-card">
+              <div class="info-k" data-i18n="hero.phoneLabel">Phone</div>
+              <div class="info-v">
+                <a class="link" href="tel:+34642334414">+34 642 33 44 14</a>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Photo grid (3 photos) -->
+        <div class="photo-grid" aria-label="Photos">
+          <div class="ph ph-a">
+            <img src="assets/images/salette-bag.jpg" alt="Salette bag" loading="lazy" />
+          </div>
+          <div class="ph ph-b">
+            <img src="assets/images/salette-logo-ofc.jpg" alt="Salette logo" loading="lazy" />
+          </div>
+          <div class="ph ph-c">
+            <img src="assets/images/salette-sign.jpg" alt="Salette sign" loading="lazy" />
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Menu -->
+    <section id="menu" class="section">
+      <div class="container">
+        <div class="section-head">
+          <h2 data-i18n="menu.title">Menu</h2>
+          <div class="menu-actions">
+            <a class="btn btn-pill btn-primary" id="orderGlovoBtn" href="#" target="_blank" rel="noopener" data-i18n="menu.orderBtn">Order on Glovo</a>
+            <a class="btn btn-pill btn-ghost" id="callBtn" href="tel:+34642334414" data-i18n="menu.callBtn">Call</a>
+          </div>
+        </div>
+
+        <div class="tabs" id="menuTabs" role="tablist" aria-label="Menu categories">
+          <button class="tab is-active" data-tab="all" role="tab" aria-selected="true" data-i18n="menu.tabs.all">All</button>
+          <button class="tab" data-tab="best" role="tab" aria-selected="false" data-i18n="menu.tabs.best">Best sellers</button>
+          <button class="tab" data-tab="bowls" role="tab" aria-selected="false" data-i18n="menu.tabs.bowls">House poke bowls</button>
+          <button class="tab" data-tab="combo" role="tab" aria-selected="false" data-i18n="menu.tabs.combo">Combo deals</button>
+          <button class="tab" data-tab="drinks" role="tab" aria-selected="false" data-i18n="menu.tabs.drinks">Drinks</button>
+        </div>
+
+        <div class="card-grid" id="menuGrid" aria-live="polite"></div>
+      </div>
+    </section>
+
+    <!-- About -->
+    <section id="about" class="section alt">
+      <div class="container">
+        <div class="section-head">
+          <h2 data-i18n="about.title">About us</h2>
+          <p class="muted" data-i18n="about.lead">Meet the people behind Salette — good vibes, care and consistency.</p>
+        </div>
+
+        <div class="team-grid">
+          <article class="team-card">
+            <div class="team-photo">
+              <img src="assets/images/team-linda.jpg" alt="Linda in front of Salette" loading="lazy" />
+            </div>
+            <div class="team-body">
+              <h3>Linda</h3>
+              <p class="team-text" data-i18n="team.linda.text">
+                Calm and focused - keeps the station organized and running smoothly, bringing steady energy to every shift.
+              </p>
+              <ul class="team-list">
+                <li data-i18n="team.linda.b1">Favorite bowl: Crazy Salmon</li>
+                <li data-i18n="team.linda.b2">Loves spicy sauce</li>
+                <li data-i18n="team.linda.b3">Enjoys reading, videogames &amp; painting</li>
+              </ul>
+            </div>
+          </article>
+
+          <article class="team-card">
+            <div class="team-photo">
+              <img src="assets/images/team-zaya.jpg" alt="Zaya in front of Salette" loading="lazy" />
+            </div>
+            <div class="team-body">
+              <h3>Zaya</h3>
+              <p class="team-text" data-i18n="team.zaya.text">
+                Warm, bright and dedicated - brings good energy and rhythm to the team, and genuinely cares about everyone’s well-being.
+              </p>
+              <ul class="team-list">
+                <li data-i18n="team.zaya.b1">Favorite dish: Korean Bibimbap</li>
+                <li data-i18n="team.zaya.b2">Always brings good vibes</li>
+                <li data-i18n="team.zaya.b3">When not prepping bowls, you might catch her dancing</li>
+              </ul>
+            </div>
+          </article>
+
+          <article class="team-card">
+            <div class="team-photo">
+              <img src="assets/images/team-oriana.jpg" alt="Oriana in front of Salette" loading="lazy" />
+            </div>
+            <div class="team-body">
+              <h3>Oriana</h3>
+              <p class="team-text" data-i18n="team.oriana.text">
+                Extroverted and welcoming - makes every guest feel at home with her contagious energy and warmth.
+              </p>
+              <ul class="team-list">
+                <li data-i18n="team.oriana.b1">Favorite poke: Chicken Karaage</li>
+                <li data-i18n="team.oriana.b2">Plays the violin</li>
+                <li data-i18n="team.oriana.b3">Loves chatting with customers</li>
+              </ul>
+            </div>
+          </article>
+        </div>
+
+        <div class="center">
+          <a class="btn btn-pill btn-ghost btn-ig" id="igBtn" href="https://instagram.com/salette.bcn" target="_blank" rel="noopener">
+            <span data-i18n="about.follow">Follow us on Instagram</span>
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <!-- Location -->
+    <section id="location" class="section">
+      <div class="container location-grid">
+        <div>
+          <div class="section-head">
+            <h2 data-i18n="loc.title">Find us</h2>
+            <p class="muted" data-i18n="loc.address">Carrer de Bailèn, 233 · Gràcia · 08037 Barcelona, Spain</p>
+          </div>
+
+          <div class="info-stack">
+            <div class="info-card">
+              <div class="info-k" data-i18n="loc.hoursLabel">Opening hours</div>
+              <div class="info-v" id="locHoursValue">
+                Mon–Thu 12:00–21:00<br>
+                Fri–Sat 13:00–22:00<br>
+                Sun Closed
+              </div>
+            </div>
+            <div class="info-card">
+              <div class="info-k" data-i18n="loc.phoneLabel">Phone</div>
+              <div class="info-v"><a class="link" href="tel:+34642334414">+34 642 33 44 14</a></div>
+            </div>
+          </div>
+        </div>
+
+        <div class="map-wrap" aria-label="Map">
+          <iframe
+            title="Google map"
+            loading="lazy"
+            referrerpolicy="no-referrer-when-downgrade"
+            src="https://www.google.com/maps?q=Carrer%20de%20Bail%C3%A8n%20233%2C%20Barcelona&output=embed">
+          </iframe>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container footer-inner">
+      <div>
+        <div class="footer-brand">Salette</div>
+        <div class="muted" data-i18n="footer.tagline">Fresh Salads &amp; Poke · Barcelona</div>
+      </div>
+      <div class="footer-links">
+        <a href="#menu" data-i18n="nav.menu">Menu</a>
+        <a href="#about" data-i18n="nav.about">About us</a>
+        <a href="#location" data-i18n="nav.location">Location</a>
+      </div>
+    </div>
+  </footer>
+
+  <script src="app.js"></script>
+</body>
+</html>
